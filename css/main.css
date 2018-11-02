@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Knewave|Nosifer|Titan+One');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+*
+{ 
+    margin: 0; 
+    padding: 0; 
+    outline: none; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    -ms-box-sizing: border-box; 
+    box-sizing: border-box; 
+    vertical-align: top; 
+    text-align: left; 
+    font-family: "-apple-system","system-ui","roboto", "BlinkMacSystemFont", "Helvetica Neue",
+    "Lucida Grande","Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html, body { height: 100%; width: 100%; }
+body 
+{
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+	background: rgb(255, 255, 255);
+    color: #45434d;
+    min-width: 320px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;    
+}
+
+/*Header menu*/
+/*Mobile view (320px - 425px)*/
+
+header
+{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    min-height: 100px;
+    background: none;
+    min-width: 320px;
+    z-index: 10;
+}
+
+
+/*start image buffer*/
+header .area-buffer
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    top:0px;
+}
+
+
+
+header .area-buffer .area .buffer
+{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%; 
+    text-align: center;
+}
+
+/* header .area-buffer .area .buffer .btn-arrow-left
+{
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    width: 35px;
+    color: rgba(0, 0, 0);
+    background:rgba(0, 0, 0, .01);
+    cursor: pointer;
+    top: 50%;
+    transform: translate(0%,-50%);
+    font-size: 80px;
+    cursor: pointer;
+    
+}
+
+header .area-buffer .area .buffer .btn-arrow-right
+{
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+    width: 35px;
+    color: rgba(0, 0, 0);
+    background:rgba(0, 0, 0, .01);
+    cursor: pointer;
+    top: 50%;
+    transform: translate(0%,-50%);
+    font-size: 80px;
+    cursor: pointer;
+} */
+
+header .area.img-1
+{
+    position: relative;
+    /* top:60px; */
+    width: 100%;
+    height: 100%;
+    background-image:url(/paoluccidecorazioni/img/main-buffer-img/home-logoPollok.png);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-animation: img-1 2s; /* Safari 4.0 - 8.0 */
+    animation: img-1 2s;
+}
+@keyframes img-1 {
+    0% {transform: scale(0.1)}
+    50% {transform: scale(1.1)}
+    100% {transform: scale(1)}
+}
+
+header .container-logo
+{
+    width: 100%;
+    height: 50px;
+    position:absolute;
+    top: 5px;
+    text-align: center;
+    background: none;
+}
+
+header .logo
+{
+    width: 50px;
+    height: 50px;
+    background: none;
+}
+
+header .navbar .title-background
+{
+    position: absolute;
+    display: inline-block; 
+    top: 60px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: white;
+    transition: ease-in-out 0.4s;
+}
+
+header .navbar .title-background.active
+{
+    position: fixed;
+    top:0px;
+}
+
+header .navbar .title
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'nosifer', cursive;
+    color: rgba(0, 0, 0);
+    line-height: 100%;
+    font-size: 20px;
+    transition: ease-in-out 0.4s;
+    background: none;
+    margin: 5px auto;
+}
+
+header .navbar .menu-toggle
+{
+    position: absolute;
+    display: inline-block; 
+    cursor:pointer;
+    top:0px;
+    left: 14px;
+    margin: 9px auto;
+}
+
+header .navbar .menu-bar1, 
+header .navbar .menu-bar2,
+header .navbar .menu-bar3
+{
+    display: block;
+    top: 19px;
+    right: 20px;
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0);
+    transition: 0.4s;
+    border: solid black 2px;
+    border-radius: 20px;
+}
+
+header .navbar .menu-toggle.active .menu-bar1 {-ms-transform: rotate(-45deg) translate(50px, 100px); /* IE 9 */
+                                            -webkit-transform: rotate(-45deg) translate(-5px, 4px);/*safari*/
+                                             transform: rotate(-45deg) translate(-5px,4px);}/*chrome*/ 
+header .navbar .menu-toggle.active .menu-bar2 {opacity: 0;}
+header .navbar .menu-toggle.active .menu-bar3 {-ms-transform: rotate(45deg) translate(-8px, 8px); /* IE 9 */
+                                            -webkit-transform: rotate(45deg) translate(-8px, 8px);/*safari*/
+                                             transform: rotate(45deg) translate(-8px, -8px);}/*chrome*/ 
+
+
+
+aside.menu-list
+{ 
+    position: fixed;
+    display: block;
+    background-size: contain;
+    background-color: white;
+    color: rgba(56, 60, 66);
+    Width: 100%;
+    max-height: 310px;
+    top:-310px;
+    transition:ease-in-out 0.4s;
+    z-index: 9;
+    font-size: 30px;
+}
+/* Show the menu appending the title*/
+aside.menu-list.active
+{ 
+    top: 105px;  
+}
+aside.menu-list.active.appending
+ {
+    top: 50px;
+ }
+
+.menu-item,.menu-home,.menu-services,.menu-photo,.menu-video,.menu-info
+{ 
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.home-link,.services-link,.photo-link,.video-link,.info-link
+{
+    font-family: "Satisfy", cursive;
+    font-size: 34px;
+}
+
+.menu-home:hover
+{
+    border-right: solid 20px grey;
+    border-left: solid 20px grey;
+    /* color: whitesmoke; */
+}
+.menu-services:hover
+{
+    border-right: solid 20px grey;
+    border-left: solid 20px grey;
+    /* color: whitesmoke; */
+}
+.menu-photo:hover
+{
+    border-right: solid 20px grey;
+    border-left: solid 20px grey;
+    /* color: whitesmoke; */
+}
+.menu-video:hover
+{
+    border-right: solid 20px grey;
+    border-left: solid 20px grey;
+    /* color: whitesmoke; */
+}
+.menu-info:hover
+{
+    border-right: solid 20px grey;
+    border-left: solid 20px grey;
+    /* color: whitesmoke; */
+}
+
+aside ul li a{text-decoration: none; color: black;}
+
+/*Main page */
+/*Mobile view (320px - 768px)*/
+
+main
+{
+    position: relative;
+    display: block;
+    /* top: 300px; */
+    width: 100%;
+    height:100%;
+}
+
+main .box
+{
+    text-align: center;
+}
+
+main .box-1
+{   
+    height: 0px; 
+    position: relative;
+    display: block;   
+}
+
+main .box-1.active
+{
+    top: 450px;
+}
+
+main .box-2
+{   
+    position: relative;
+    display: block;    
+    width: 100%;
+    height: 20px;
+}
+
+main .container-parallax-1
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-block-end: 30px;
+    /*background-image:url(/paoluccidecorazioni/img/main-img/decorazione-lego_435x222_01.png);
+    /* background-size: auto;
+    background-position: bottom center; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    text-align: center;
+}
+
+main .img.intro
+{ 
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url(/paoluccidecorazioni/img/main-img/decorazione-colonne_1920x1764.png);
+    background-size: 100% 350px; 
+    background-repeat: no-repeat;
+}
+
+main .prlx-1-2
+{   display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 260px;
+    /* background-color: white; */
+}
+
+main .prlx-1-1
+{
+    top: 10px;
+    width: auto;
+    position: relative;
+    display: inline-block;
+}
+
+main .container-parallax-2
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image:url(/paoluccidecorazioni/img/main-img/decorazione-grey.JPG);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+main .prlx-2-1 
+{   display: block;
+    position: absolute;
+    top: 10px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+main .prlx-2-1-1 
+{   display: block;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 200px; */
+    margin: 0 auto;
+}
+
+/*Text for main page*/
+main .title 
+{
+    position: relative;
+    font-family: Roboto, cursive;
+    color:whitesmoke;
+    font-weight: bolder;
+    line-height: 1.5em;
+    font-size: 28px;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+    background-image: linear-gradient(to right, rgba(56,170,225,1), rgba(137,222,243,1));
+}
+
+main .title.home 
+{
+    background-image: linear-gradient(to right, rgba(0,88,154,1), rgba(0,149,154,1));
+}
+
+main .title.service 
+{
+    background-image: linear-gradient(to right, rgba(180,22,34,1), rgba(255,22,34,1));
+}
+
+main .title.photo
+{
+    background-image: linear-gradient(to right, rgba(0,101,51,1), rgba(0,206,51,1));
+}
+
+main .text
+{
+    position: relative;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 5px;
+    color: black;
+}
+
+main .text p
+{
+    text-align: center;
+}
+
+main .text.intro p
+{
+    position: relative;
+    display: block;
+    font-family: "Satisfy", cursive;
+    font-size: 3em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+main .text.intro-label p
+{
+    position: relative;
+    display: block;
+    font-family: "Satisfy", cursive;
+    font-size: 1.5em;
+    padding-top: 5px;
+}
+
+main .text.intro-label p
+{
+    position: relative;
+    display: block;
+    font-family: "Satisfy", cursive;
+    font-size: 1.5em;
+    padding-top: 5px;
+}
+
+main .text.service p
+{
+    position: relative;
+    display: block;
+    font-family: "Satisfy", cursive;
+    font-size: 3em;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    animation: ease-in-out 0.4s;
+}
+
+main .text.service-label p
+{
+    position: relative;
+    display: block;
+    font-family: "Satisfy", cursive;
+    font-size: 2em;
+    padding-top: 5px;
+    animation: ease-in-out 0.4s;
+}
+
+/*Gallery*/
+.galleria
+{ 
+    position: relative;
+    display: block;
+    max-width: 1000px;
+    height: 800px;
+    margin: 0 auto 0 auto;
+}
+
+
+
+
+/*Tablet view (768px)*/
+@media screen and (min-width: 768px)
+{
+    header {height: 800px}
+    header .area-buffer {height: 800px}
+    aside.menu-list.active {top:155px}
+    aside.menu-list.active.appending {top: 100px}
+    main .text.intro p {font-size: 4em}
+    main .text.intro-label p {font-size:2em}
+    header .navbar .title-background {height:100px}
+    header .navbar .title-background .title.one {font-size: 35px; top:8px; transition: ease-in-out 0.4s}
+    header .navbar .title-background .title.two {font-size: 35px; top:45px; transition: ease-in-out 0.4s}
+    header .navbar .menu-toggle {top:auto}
+    main .img.intro {height: 600px; background-size: 100% 600px;}
+    main .text.intro p {padding-top: 75px}
+    main .container-parallax-2 {height:700px}
+    main .prlx-1-2{top:50px; width: 450px;}
+    main .text.service p{font-size: 5em;}
+    main .text.service-label p{font-size: 3em;}
+}
+
+@media screen and (min-width: 768px)
+{   aside.menu-list.active {top:155px}
+}
+
+/*Laptop view (1024px)*/
+@media screen and (min-width: 1024px)
+
+{
+    header {height: 768px}
+    header .area-buffer {height: 768px}
+    header .area.img-1 {background-size:40%; background-position-y: 150px;}
+    main .img.intro {width: 100%; height: 500px; background-size: 500px 500px; background-position-x: right;}
+    main .prlx-1-2 {left:0px; width: 500px; text-align: center; top:0px; margin:100px 100px;}
+    main .text.intro p {padding-top: 0px}
+    main .text.intro-label {font-size: 1.8em}
+    main .box-1 {height: 190px;}
+    header .navbar .menu-toggle {display: none}
+    header .navbar .title-background {top:0px;}
+    aside.menu-list {top: 100px; text-align: center; padding: 20px;}
+    aside.menu-list .menu-item,.menu-home,.menu-services,.menu-photo,.menu-video,.menu-info {display: inline;padding: 20px 40px 10px 40px;}
+    .menu-home:hover,.menu-services:hover,.menu-photo:hover,.menu-video:hover,.menu-info:hover
+    {
+    border-bottom: solid 5px grey;
+    border-right: none;
+    border-left: none;
+    }
+
+}
+
+
