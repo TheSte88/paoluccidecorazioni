@@ -28,482 +28,556 @@ body
 	-webkit-user-select: none;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
-	background: rgb(255, 255, 255);
-    color: #45434d;
+	background: #DBDBDB;
+    color: #636363;
     min-width: 320px;
-    overflow: scroll;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;    
 }
-
-/*Header menu*/
-/*Mobile view (320px - 425px)*/
-
-header
+p
 {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    min-height: 100px;
-    background: none;
-    min-width: 320px;
-    z-index: 10;
-}
-
-
-/*start image buffer*/
-header .area-buffer
-{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    top:0px;
-}
-
-header .area-buffer .area .buffer
-{
-    position: absolute;
-    display: inline-block;
-    width: 100%;
-    height: 100%; 
+    font-size: 24px;
     text-align: center;
+    color: #2E2B33;
+    font-family: "Satisfy", cursive;
 }
-
-/* header .area-buffer .area .buffer .btn-arrow-left
+/*Mobile view (320px - 425px)*/
+/*Header menu (toolbar)*/
+.toolbar
+{
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(#636363, #2E2B33);
+    box-shadow: 2px 3px 3px 3px rgba(0,0,87,.05);
+    z-index: 9999;
+}
+.toolbar .btn-menu-toggle
 {
     position: absolute;
     display: inline-block;
+    top: 0;
     left: 0;
-    width: 35px;
-    color: rgba(0, 0, 0);
-    background:rgba(0, 0, 0, .01);
+    width: 50px;
+    height: 100%;
     cursor: pointer;
-    top: 50%;
-    transform: translate(0%,-50%);
-    font-size: 80px;
-    cursor: pointer;
-    
+    z-index: 9999;
 }
-
-header .area-buffer .area .buffer .btn-arrow-right
+.toolbar .btn-menu-toggle .menu-bar1
 {
     position: absolute;
     display: inline-block;
+    top: 13px;
+    left: 8px;
+    right: 8px;
+    transition: 0.4s;
+    background-color: #FCFFEE;
+    border: solid #FCFFEE 2px;
+    border-radius: 20px;
+    z-index: 9999;
+} 
+.toolbar .btn-menu-toggle .menu-bar2
+{
+    position: absolute;
+    display: inline-block;
+    top: 23px;
+    left: 10px;
     right: 10px;
-    width: 35px;
-    color: rgba(0, 0, 0);
-    background:rgba(0, 0, 0, .01);
-    cursor: pointer;
-    top: 50%;
-    transform: translate(0%,-50%);
-    font-size: 80px;
-    cursor: pointer;
-} */
-
-header .area.img-1
+    transition: 0.4s;
+    background-color: #FCFFEE;
+    border: solid #FCFFEE 2px;
+    border-radius: 20px;
+    z-index: 9999;
+} 
+.toolbar .btn-menu-toggle .menu-bar3
+{
+    position: absolute;
+    display: inline-block;
+    top: 33px;
+    left: 8px;
+    right: 8px;
+    transition: 0.4s;
+    background-color: #FCFFEE;
+    border: solid #FCFFEE 2px;
+    border-radius: 20px;
+    z-index: 9999;
+} 
+.toolbar .btn-menu-toggle.active .menu-bar1
+{
+    -ms-transform: rotate(-45deg) translate(50px, 100px); /* IE 9 */
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);/*safari*/
+    transform: rotate(-45deg) translate(-7px,5px);/*chrome*/ 
+}
+.toolbar .btn-menu-toggle.active .menu-bar2 {opacity: 0;}
+.toolbar .btn-menu-toggle.active .menu-bar3 
+{
+    -ms-transform: rotate(45deg) translate(-8px, -7px); /* IE 9 */
+    -webkit-transform: rotate(45deg) translate(-8px, -7px);/*safari*/
+    transform: rotate(45deg) translate(-8px, -7px);/*chrome*/ 
+}
+.toolbar .title
+{
+    position: absolute;
+    display: inline-block;
+    left: 50px;
+    right: 0px;
+    text-align: center;
+    font-family: 'nosifer', cursive;
+    color: #FCFFEE;
+    line-height: 100%;
+    font-size: 20px;
+    transition: ease-in-out 0.4s;
+    background: none;
+    margin: 0px auto;
+    z-index: 9999;
+}
+.toolbar .title.one
+{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    padding-top: 5px;
+    bottom: 25px;
+    right: 50px;
+    text-align: center;
+    z-index: 9999;
+}
+.toolbar .title.two
+{
+    position: absolute;
+    display: inline-block;
+    top: 25px;
+    bottom: 0;
+    right: 50px;
+    z-index: 9999;
+}
+.toolbar .logo
+{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    background-image: url(../img/logo/logo-bianco.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.toolbar .navbar
+{
+    position: absolute;   
+    left: 0;
+    right: 0;
+    height: 205px;
+    background: linear-gradient(#2E2B33, #0D0D0F);
+    transform: translateY(-220px);
+    transform-style: preserve-3d;
+    transition: .3s ease-in-out;
+    z-index: 9998;
+}
+.toolbar .navbar .menu-item .menu-home
 {
     position: relative;
+    height: 50px;
+}
+.toolbar .navbar .menu-item .menu-home .home-link
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: #F9FFF6;
+    font-family: "Satisfy", cursive;
+}
+.toolbar .navbar .menu-item .menu-home .home-link:hover
+{
+    -webkit-animation: hover-bounce .5s;
+    -moz-animation: hover-bounce .5s;
+    -o-animation: hover-bounce .5s;
+    animation: hover-bounce .5s;
+    border-left: 8px solid #FCFFEE;
+    border-right: 8px solid #FCFFEE;
+}
+.toolbar .navbar .menu-item .menu-services
+{
+    position: relative;
+    height: 50px;   
+}
+.toolbar .navbar .menu-item .menu-services .services-link
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: #FCFFEE;
+    font-family: "Satisfy", cursive;
+}
+.toolbar .navbar .menu-item .menu-services .services-link:hover
+{
+    -webkit-animation: hover-bounce .5s;
+    -moz-animation: hover-bounce .5s;
+    -o-animation: hover-bounce .5s;
+    animation: hover-bounce .5s;
+    border-left: 8px solid #FCFFEE;
+    border-right: 8px solid #FCFFEE;
+}
+.toolbar .navbar .menu-item .menu-photo
+{
+    position: relative;
+    height: 50px;  
+}
+.toolbar .navbar .menu-item .menu-photo .photo-link
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: #FCFFEE;
+    font-family: "Satisfy", cursive;
+
+}
+.toolbar .navbar .menu-item .menu-photo .photo-link:hover
+{
+    -webkit-animation: hover-bounce .5s;
+    -moz-animation: hover-bounce .5s;
+    -o-animation: hover-bounce .5s;
+    animation: hover-bounce .5s;
+    border-left: 8px solid #FCFFEE;
+    border-right: 8px solid #FCFFEE;
+}
+.toolbar .navbar .menu-item .menu-info
+{
+    position: relative;
+    height: 50px;
+}
+.toolbar .navbar .menu-item .menu-info .info-link
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: #FCFFEE;
+    font-family: "Satisfy", cursive;
+}
+.toolbar .navbar .menu-item .menu-info .info-link:hover
+{
+    -webkit-animation: hover-bounce .5s;
+    -moz-animation: hover-bounce .5s;
+    -o-animation: hover-bounce .5s;
+    animation: hover-bounce .5s;
+    border-left: 8px solid #FCFFEE;
+    border-right: 8px solid #FCFFEE;
+}
+.toolbar .navbar.active
+{
+    transform: translateY(50px);
+
+}
+@keyframes hover-bounce {
+    0% 
+    {
+        border-left: 2px solid #FCFFEE;
+        border-right: 2px solid #FCFFEE;
+    }
+    50% 
+    {
+        border-left: 5px solid #FCFFEE;
+        border-right: 5px solid #FCFFEE;
+    }
+    100% 
+    {
+        border-left: 8px solid #FCFFEE;
+        border-right: 8px solid #FCFFEE;
+    }
+}
+/*Start main*/
+/*Mobile view (320px - 768px)*/
+.main
+{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height:100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; 
+}
+
+/*start Parallax*/
+/*logo + animation logo*/
+.main .area-buffer
+{
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(#D1D1D1, #DBDBDB);
+    z-index: 9996;
+}
+.main .area.img-1
+{
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../img/main-buffer-img/home-logoPollok.png);
-    background-size: 100%;
-    background-position: top center;
+    background-image: url(../img/logo/logo-parallax.png);
+    background-size: contain;
+    background-position: left 50px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-animation: img-1 2s; /* Safari 4.0 - 8.0 */
     animation: img-1 2s;
+    z-index: 9997;
 }
 @keyframes img-1 {
     0% {transform: scale(0.1)}
     50% {transform: scale(1.1)}
     100% {transform: scale(1)}
 }
+/*End logo + animation logo*/
 
-header .container-logo
-{
-    width: 100%;
-    height: 50px;
-    position:absolute;
-    top: 5px;
-    text-align: center;
-    background: none;
-}
-
-header .logo
-{
-    width: 50px;
-    height: 50px;
-    background: none;
-}
-
-header .navbar .title-background
+.main .text.intro
 {
     position: absolute;
-    display: inline-block; 
-    top: 60px;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    background: white;
-    transition: ease-in-out 0.4s;
+    display: inline-block;
+    top: 210px;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+    z-index: 9997;
+    background: #85C7F2;
 }
-
-header .navbar .title-background.active
-{
-    position: fixed;
-    top:0px;
-}
-
-header .navbar .title
-{
-    position: absolute;
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-family: 'nosifer', cursive;
-    color: rgba(0, 0, 0);
-    line-height: 100%;
-    font-size: 20px;
-    transition: ease-in-out 0.4s;
-    background: none;
-    margin: 5px auto;
-}
-
-header .navbar .menu-toggle
-{
-    position: absolute;
-    display: inline-block; 
-    cursor:pointer;
-    top:0px;
-    left: 14px;
-    margin: 9px auto;
-}
-
-header .navbar .menu-bar1, 
-header .navbar .menu-bar2,
-header .navbar .menu-bar3
-{
-    display: block;
-    top: 19px;
-    right: 20px;
-    width: 30px;
-    height: 4px;
-    margin: 5px;
-    background-color: rgba(0, 0, 0);
-    transition: 0.4s;
-    border: solid black 2px;
-    border-radius: 20px;
-}
-
-header .navbar .menu-toggle.active .menu-bar1 {-ms-transform: rotate(-45deg) translate(50px, 100px); /* IE 9 */
-                                            -webkit-transform: rotate(-45deg) translate(-5px, 4px);/*safari*/
-                                             transform: rotate(-45deg) translate(-5px,4px);}/*chrome*/ 
-header .navbar .menu-toggle.active .menu-bar2 {opacity: 0;}
-header .navbar .menu-toggle.active .menu-bar3 {-ms-transform: rotate(45deg) translate(-8px, 8px); /* IE 9 */
-                                            -webkit-transform: rotate(45deg) translate(-8px, 8px);/*safari*/
-                                             transform: rotate(45deg) translate(-8px, -8px);}/*chrome*/ 
-
-
-
-aside.menu-list
-{ 
-    position: fixed;
-    display: block;
-    background-size: contain;
-    background-color: white;
-    color: rgba(56, 60, 66);
-    Width: 100%;
-    max-height: 310px;
-    top:-310px;
-    transition:ease-in-out 0.4s;
-    z-index: 9;
-    font-size: 30px;
-}
-/* Show the menu appending the title*/
-aside.menu-list.active
-{ 
-    top: 105px;  
-}
-aside.menu-list.active.appending
- {
-    top: 50px;
- }
-
-.menu-item,.menu-home,.menu-services,.menu-photo,.menu-video,.menu-info
-{ 
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-}
-
-.home-link,.services-link,.photo-link,.video-link,.info-link
-{
-    font-family: "Satisfy", cursive;
-    font-size: 34px;
-}
-
-.menu-home:hover
-{
-    border-right: solid 20px grey;
-    border-left: solid 20px grey;
-    /* color: whitesmoke; */
-}
-.menu-services:hover
-{
-    border-right: solid 20px grey;
-    border-left: solid 20px grey;
-    /* color: whitesmoke; */
-}
-.menu-photo:hover
-{
-    border-right: solid 20px grey;
-    border-left: solid 20px grey;
-    /* color: whitesmoke; */
-}
-.menu-video:hover
-{
-    border-right: solid 20px grey;
-    border-left: solid 20px grey;
-    /* color: whitesmoke; */
-}
-.menu-info:hover
-{
-    border-right: solid 20px grey;
-    border-left: solid 20px grey;
-    /* color: whitesmoke; */
-}
-
-aside ul li a{text-decoration: none; color: black;}
-
-/*Main page */
-/*Mobile view (320px - 768px)*/
-
-main
-{
-    position: relative;
-    display: block;
-    /* top: 300px; */
-    width: 100%;
-    height:100%;
-}
-
-main .box
-{
-    text-align: center;
-}
-
-main .box-1
-{   
-    height: 0px; 
-    position: relative;
-    display: block;   
-}
-
-main .box-1.active
-{
-    top: 450px;
-}
-
-main .box-2
-{   
-    position: relative;
-    display: block;    
-    width: 100%;
-    height: 20px;
-}
-
 main .container-parallax-1
 {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding-block-end: 30px;
-    /*background-image:url(/paoluccidecorazioni/img/main-img/decorazione-lego_435x222_01.png);
-    /* background-size: auto;
-    background-position: bottom center; */
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    text-align: center;
-}
-
-main .img.intro
-{ 
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 350px;
-    background-image: url(../img/main-img/decorazione-colonne_1920x1764.png);
-    background-size: 100% 350px; 
-    background-repeat: no-repeat;
-}
-
-main .prlx-1-2
-{   display: block;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 260px;
-    /* background-color: white; */
-}
-
-main .prlx-1-1
-{
-    top: 10px;
-    width: auto;
     position: relative;
     display: inline-block;
+    top: 310px;
+    width: 100%;
+    height: 400px;   
+    background-image: url(../img/texture/decoration\ -4.JPG);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 9996;
 }
-
+.main .text.service
+{
+    position: relative;
+    display: inline-block;
+    top: 310px;
+    width: 100%;
+    background: #85C7F2;
+    z-index: 9996;
+}
 main .container-parallax-2
 {
-    display: block;
     position: relative;
+    display: inline-block;
+    top: 310px;
     width: 100%;
-    height: 500px;
-    background-image: url(../img/main-img/decorazione-grey.JPG);
+    height: 550px;
+    background-image: url(../img/industriale/decorazione-colonne.png);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    text-align: center;
+    z-index: 9996;
 }
-
-main .prlx-2-1 
-{   display: block;
-    position: absolute;
-    top: 10px;
-    margin: 0 auto;
+.main .text.photo
+{
+    position: relative;
+    display: inline-block;
+    top: 310px;
     width: 100%;
-    text-align: center;
+    background: #85C7F2;
+    z-index: 9996;
 }
+/*End parallax*/
 
-main .prlx-2-1-1 
-{   display: block;
-    position: relative;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 200px; */
-    margin: 0 auto;
-}
+/*Start Gallery*/
 
-/*Text for main page*/
-main .title 
-{
-    position: relative;
-    font-family: Roboto, cursive;
-    color:whitesmoke;
-    font-weight: bolder;
-    line-height: 1.5em;
-    font-size: 28px;
-    letter-spacing: normal;
-    text-align: center;
-    margin: 20px;
-    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
-    background-image: linear-gradient(to right, rgba(56,170,225,1), rgba(137,222,243,1));
-}
-
-main .title.home 
-{
-    background-image: linear-gradient(to right, rgba(0,88,154,1), rgba(0,149,154,1));
-}
-
-main .title.service 
-{
-    background-image: linear-gradient(to right, rgba(180,22,34,1), rgba(255,22,34,1));
-}
-
-main .title.photo
-{
-    background-image: linear-gradient(to right, rgba(0,101,51,1), rgba(0,206,51,1));
-}
-
-main .text
-{
-    position: relative;
-    letter-spacing: normal;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 5px;
-    color: black;
-}
-
-main .text p
-{
-    text-align: center;
-}
-
-main .text.intro p
-{
-    position: relative;
-    display: block;
-    font-family: "Satisfy", cursive;
-    font-size: 3em;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-main .text.intro-label p
-{
-    position: relative;
-    display: block;
-    font-family: "Satisfy", cursive;
-    font-size: 1.5em;
-    padding-top: 5px;
-}
-
-main .text.intro-label p
-{
-    position: relative;
-    display: block;
-    font-family: "Satisfy", cursive;
-    font-size: 1.5em;
-    padding-top: 5px;
-}
-
-main .text.service p
-{
-    position: relative;
-    display: block;
-    font-family: "Satisfy", cursive;
-    font-size: 3em;
-    padding-top: 100px;
-    padding-bottom: 30px;
-    animation: ease-in-out 0.4s;
-}
-
-main .text.service-label p
-{
-    position: relative;
-    display: block;
-    font-family: "Satisfy", cursive;
-    font-size: 2em;
-    padding-top: 5px;
-    animation: ease-in-out 0.4s;
-}
-
-/*Gallery*/
-.galleria
+.main .galleria
 { 
     position: relative;
-    display: block;
-    max-width: 1000px;
-    height: 800px;
-    margin: 0 auto 0 auto;
+    display: inline-block;
+    top: 310px;
+    left: 0;
+    width: 100%;
+    height: 380px;
 }
-
+.main .galleria .texture
+{
+    position: absolute;
+    display: inline-block;
+    top: 25px;
+    left: 25px;
+    height: 160px;
+    width: 150px;
+    cursor: pointer;
+}
+.main .galleria .texture .texture-1
+{
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    width: 110px;
+    height: 110px;
+    z-index: 9998;
+    background-image: url(../img/texture/decoration\ -1.JPG);
+    background-size: 110px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.main .galleria .texture .texture-2
+{
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    width: 110px;
+    height: 110px;
+    z-index: 9997;
+    background-image: url(../img/texture/decoration\ -2.JPG);
+    background-size: 110px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.main .galleria .texture .title
+{
+    position: absolute;
+    display: inline-block;
+    top: 130px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+}
+.main .galleria .interni
+{
+    position: absolute;
+    display: inline-block;
+    top: 25px;
+    right: 25px;
+    height: 160px;
+    width: 150px;
+    cursor: pointer;
+}
+.main .galleria .interni .interni-1
+{
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    width: 110px;
+    height: 110px;
+    z-index: 9998;
+    background-image: url(../img/interni/arte-porta.png);
+    background-size: 160px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.main .galleria .interni .interni-2
+{
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    width: 110px;
+    height: 110px;
+    z-index: 9997;
+    background-image: url(../img/interni/camera-da-letto.png);
+    background-size: 250px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.main .galleria .interni .title
+{
+    position: absolute;
+    display: inline-block;
+    top: 130px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+}
+.main .galleria .industriale
+{
+    position: absolute;
+    display: inline-block;
+    top: 200px;
+    left: 25px;
+    height: 160px;
+    width: 150px;
+    cursor: pointer;
+}
+.main .galleria .industriale .industriale-1
+{
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    width: 110px;
+    height: 110px;
+    z-index: 9998;
+    background-image: url(../img/industriale/decorazione-colonne.png);
+    background-size: 120px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.main .galleria .industriale .industriale-2
+{
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    width: 110px;
+    height: 110px;
+    z-index: 9997;
+    background-image: url(../img/industriale/lampadario-resina.jpg);
+    background-size: 120px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.main .galleria .industriale .title
+{
+    position: absolute;
+    display: inline-block;
+    top: 130px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+}
 /*start footer*/
 main .home-footer
 {
     position: relative;
     display: inline-block;
-    top: 15px;
+    top: 310px;
     left: 0;
-    height: 630px;
+    height: 610px;
     width: 100%;
-    background: linear-gradient(#485563, #29323c);
+    background: linear-gradient(to top, #efeeee, #2a363b);
     color: white;
 }
 main .home-footer .container
@@ -525,7 +599,7 @@ main .home-footer .container .footer-logo
     padding-left: 75px;
     padding-top: 20px;
     font-size: 18px;
-    background-image: url(../img/main-buffer-img/home-logoPollok_435x400px.png);
+    background-image: url(../img/logo/logo-bianco.png);
     background-size: 55px;
     background-position: 15px center;
     background-repeat: no-repeat;
@@ -542,7 +616,6 @@ main .home-footer .container .footer-name
     padding-top: 13px;
     font-size: 18px;
 }
-
 main .home-footer .container .footer-work
 {
     position: absolute;

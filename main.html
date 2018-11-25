@@ -16,23 +16,16 @@
         <meta name="keywords" content="imbianchino,imbiancatura,imbiancare,verniciatura,verniciare,decorazioni,decorare,pareti,muri,casa,interni,esterni">
     </head>      
     <body>
-        <header>
-            <div class="area-buffer">
-                <div class="area img-1"></div>
-            </div>
+        <header class="toolbar">
+            <div class="btn-menu-toggle">
+                <span class="menu-bar1"></span>
+                <span class="menu-bar2"></span>
+                <span class="menu-bar3"></span>
+            </div> 
+            <span class="title one">PAOLUCCI</span>
+            <span class="title two">DECORAZIONI</span>
+            <span class="logo"></span>
             <nav role="navigation" class="navbar">
-                <div class="title-background">
-                    <span class="title one">PAOLUCCI</span>
-                    <br>
-                    <span class="title two">DECORAZIONI</span>
-                    <div class="menu-toggle">
-                        <span class="menu-bar1"></span>
-                        <span class="menu-bar2"></span>
-                        <span class="menu-bar3"></span>
-                    </div>                     
-                </div>
-            </nav>
-            <aside class="menu-list">
                 <ul class="menu-item">
                     <li class="menu-home">
                         <a href="#home" class="home-link">Home</a>
@@ -43,65 +36,50 @@
                     <li class="menu-photo">
                         <a href="#photo" class="photo-link">Foto</a>
                     </li>
-                    <li class="menu-video">
-                        <a class="video-link">Video</a>
-                    </li>
                     <li class="menu-info">
                         <a href="#info" class="info-link">Informazioni</a>
                     </li>
                 </ul>
-            </aside>
+            </nav>
         </header>
-        <main>
-            <div id="home" class=box-1>
+        <main class="main">
+            <div class="area-buffer">
+                <div id="home" class="area img-1"></div>
             </div>
-            <div class="container-parallax-1">
-                <div class="prlx-1-1">
-                    <div class="text intro" role="intro">
-                        <p>Arte a domicilio</p>
-                    </div>
-                </div>
-                <div class="img intro" >
-                    <div class="prlx-1-2">
-                        <div class="text intro-label" role="intro-label">
-                            <p>L’azienda è nata dall’amore</p> 
-                            <p>per l’arte decorativa.</p>
-                        </div>
-                    </div>
-                </div>    
+            <div class="text intro" role="intro">
+                <p>Arte a domicilio</p>
+                <p>L’azienda è nata dall’amore</p> 
+                <p>per l’arte decorativa.</p>
             </div>
-            <div class="text intro" role="intro-label">
-                    <p>Gli ingredienti fondamentali</p>
-                    <div class="box-2"></div>
-                    <p>“la passione e la creatività”</p>
-                    <div class="box-2"></div>
-                </div>
-            <div id="service" class=box-1></div>
-            <div class="container-parallax-2">
-                <div class="prlx-2-1">
-                    <div class="text service" role="service">
-                        <p>I miei servizi</p>
-                    </div>
-                    <div class="prlx-2-1-1" >
-                        <div class="text service-label">
-                            <p>Tinteggiature</p>
-                            <p>Decorazioni</p>
-                            <p>Verniciature</p>
-                            <p>Resine decorative</p>
-                        </div>    
-                    </div>
-                </div>
-
+            <div class="container-parallax-1"></div>
+            <div id="service" class="text service" role="service">
+                <p>I miei servizi:</p>
+                <p>Tinteggiature</p>
+                <p>Decorazioni</p>
+                <p>Verniciature</p>
+                <p>Resine decorative</p>
             </div>
-            <div id="photo" class=box>
-                <H1 class="title photo" role="gallery">GALLERIA</H1>
-                <div class="text">
-                    Questi sono solo alcuni dei lavori da me eseguiti.
+            <div class="container-parallax-2"></div>
+            <div id="photo" class="text photo">
+                <p>Dopo anni di esperienza nel settore come imbianchino, decoratore e verniciatore ho conseguito il diploma tecnico in geometra.</p>
+                <p>La voglia di crescere e di migliorarmi, frequentando corsi ed esami tecnici, mi ha permesso di fondere le competenze pratiche e teoriche;
+                senza dimenticare gli ingredienti fondamentali “la passione e la creatività”.</p>
+            </div>
+            <div class="galleria">
+                <div class="texture">
+                    <span class="texture-1"></span>
+                    <span class="texture-2"></span>
+                    <p class="title">Texture</p>
                 </div>
-                <div class="galleria">
-                    <img src="../paoluccidecorazioni/img/main-buffer-img/texture-decoration -1.JPG">
-                    <img src="../paoluccidecorazioni/img/main-buffer-img/interior-decoration-1.JPG">
-                    <img src="../paoluccidecorazioni/img/main-buffer-img/fashion-shoes-1.jpg">
+                <div class="interni">
+                    <span class="interni-1"></span>
+                    <span class="interni-2"></span>
+                    <p class="title">Interni</p>
+                </div>
+                <div class="industriale">
+                    <span class="industriale-1"></span>
+                    <span class="industriale-2"></span>
+                    <p class="title">Industriale</p>
                 </div>
             </div>
             <footer role="contentinfo" class="home-footer" id="info">
@@ -118,25 +96,14 @@
                 </div>
             </footer>       
         </main>       
-
-
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="../paoluccidecorazioni/libs/fastclick.js"></script>
-        <script src="../paoluccidecorazioni/libs/app.js"></script>
-        <script src="../paoluccidecorazioni/galleria/galleria-1.5.7.min.js"></script>
-        <script>
-            (function() { 
-                Galleria.loadTheme('../paoluccidecorazioni/galleria/themes/classic/galleria.classic.js');
-                Galleria.run('.galleria');
-            }());
-            </script>
+        <script src="js/libs/fastclick.js"></script>
+
+        <script src="js/app.js"></script>
+
         <script>
             $(document).ready(app.init);
         </script>
     </body>      
 </html>
-
-
-<!-- <p>Dopo anni di esperienza nel settore come imbianchino, decoratore e verniciatore ho conseguito il diploma tecnico in geometra.</p>
-                <p>La voglia di crescere e di migliorarmi, frequentando corsi ed esami tecnici, mi ha permesso di fondere le competenze pratiche e teoriche;
-                senza dimenticare gli ingredienti fondamentali “la passione e la creatività”.</p>-->
