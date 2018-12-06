@@ -1,0 +1,29 @@
+[
+    {
+        "texture": {"imgOne":"img/texture/decoration-1.JPG",
+                    "imgTwo":"img/texture/decoration-2.JPG",
+                    "imgThree":"img/texture/decoration-3.png",
+                    "imgFour":"img/texture/decoration-4.JPG",
+                    "imgFive":"img/texture/decoration-5.JPG",
+                    "imgSix":"img/texture/decoration-6.JPG",
+                    "imgSeven":"img/texture/decoration-7.JPG",
+                    "imgEight":"img/texture/decoration-8.png"}
+    },
+    {
+        
+        "interni": {"imgOne":"img/interni/arte-porta.png",
+                    "imgTwo":"img/interni/camera-da-letto.png",
+                    "imgThree":"img/interni/parete-grey.JPG",
+                    "imgFour":"img/interni/parete-yellowSmoke.JPG",
+                    "imgFive":"img/interni/salotto.jpg",
+                    "imgSix":"img/interni/stucco-veneziano.JPG"}
+    },
+    {
+        "industriale":{"imgOne":"img/industriale/decorazione-colonne.png",
+                        "imgTwo":"img/industriale/lampadario-resina.jpg",
+                        "imgThree":"img/industriale/macchinari.jpg",
+                        "imgFour":"img/industriale/trattamento_alluminio.png"}
+
+
+    }
+  ]

@@ -1,0 +1,15 @@
+Preview Image:
+-src delle immagini vengono settete in file ".json" in base all'array che ritorna
+dalla funzione di lettura preparo il numero di box-preview che servono.
+
+
+ShowGallery:
+
+1. carico le immagini nella cartella nella box-preview (".img-mini")
+2. carico la prima immagine box-preview (".img")
+3. aggiungo classe ".active" alla box (".gallery-img")
+
+Nxt / Prv Image:
+1. premendo ".btn-arrow-left" o ".btn-arrow-right" mouvo src immagine
+   presente in ".img-mini" nella classe ".img"
+ 

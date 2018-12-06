@@ -417,7 +417,6 @@ main .container-parallax-2
 /*End parallax*/
 
 /*Start Gallery*/
-
 .main .galleria
 { 
     position: relative;
@@ -435,7 +434,6 @@ main .container-parallax-2
     left: 25px;
     height: 160px;
     width: 150px;
-    cursor: pointer;
 }
 .main .galleria .texture .texture-1
 {
@@ -473,6 +471,9 @@ main .container-parallax-2
     left: 0;
     height: 30px;
     width: 100%;
+    color: #006494;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .main .galleria .interni
 {
@@ -482,7 +483,6 @@ main .container-parallax-2
     right: 25px;
     height: 160px;
     width: 150px;
-    cursor: pointer;
 }
 .main .galleria .interni .interni-1
 {
@@ -520,6 +520,9 @@ main .container-parallax-2
     left: 0;
     height: 30px;
     width: 100%;
+    color: #006494;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .main .galleria .industriale
 {
@@ -529,7 +532,6 @@ main .container-parallax-2
     left: 25px;
     height: 160px;
     width: 150px;
-    cursor: pointer;
 }
 .main .galleria .industriale .industriale-1
 {
@@ -567,6 +569,77 @@ main .container-parallax-2
     left: 0;
     height: 30px;
     width: 100%;
+    color: #006494;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.main .gallery-img
+{
+    position: relative;
+    display: none;
+    margin: 0 auto;
+    top: 310px;
+    height: 350px;
+    width: 400px;
+    background: linear-gradient(#636363, #2E2B33);
+    z-index: 9999;
+    border: 1px solid white;
+}
+.main .gallery-img.active
+{
+    display: inline-block;
+}
+.main .gallery-img .btn-arrow-left
+{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 350px;
+    border: 1px solid white;
+}
+.main .gallery-img .img
+{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    height: 350px;
+    border: 1px solid white;
+}
+.main .gallery-img .btn-arrow-right
+{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 347px;
+    width: 50px;
+    height: 350px;
+    border: 1px solid white;
+}
+.main .gallery-img .img-title
+{
+    position: absolute;
+    display: inline-block;
+    top: 400px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid white;
+}
+.main .gallery-img .img-mini
+{
+    position: absolute;
+    display: inline-block;
+    top: 435px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
 }
 /*start footer*/
 main .home-footer
@@ -710,7 +783,6 @@ main .home-footer .box.map.view
 }
 /*Laptop view (1024px)*/
 @media screen and (min-width: 1024px)
-
 {
     header {height: 768px}
     header .area-buffer {height: 768px}
