@@ -170,9 +170,9 @@ p
     position: absolute;   
     left: 0;
     right: 0;
-    height: 205px;
+    height: 255px;
     background: linear-gradient(#2E2B33, #0D0D0F);
-    transform: translateY(-220px);
+    transform: translateY(-270px);
     transform-style: preserve-3d;
     transition: .3s ease-in-out;
     z-index: 9998;
@@ -254,6 +254,35 @@ p
 
 }
 .toolbar .navbar .menu-item .menu-photo .photo-link:hover
+{
+    -webkit-animation: hover-bounce .5s;
+    -moz-animation: hover-bounce .5s;
+    -o-animation: hover-bounce .5s;
+    animation: hover-bounce .5s;
+    border-left: 8px solid #FCFFEE;
+    border-right: 8px solid #FCFFEE;
+}
+.toolbar .navbar .menu-item .menu-video
+{
+    position: relative;
+    height: 50px;  
+}
+.toolbar .navbar .menu-item .menu-video .video-link
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: #FCFFEE;
+    font-family: "Satisfy", cursive;
+
+}
+.toolbar .navbar .menu-item .menu-video .video-link:hover
 {
     -webkit-animation: hover-bounce .5s;
     -moz-animation: hover-bounce .5s;
@@ -375,7 +404,7 @@ main .container-parallax-1
     top: 310px;
     width: 100%;
     height: 400px;   
-    background-image: url(../img/texture/decoration\ -4.JPG);
+    background-image: url(../img/texture/decoration-4.JPG);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -444,7 +473,7 @@ main .container-parallax-2
     width: 110px;
     height: 110px;
     z-index: 9998;
-    background-image: url(../img/texture/decoration\ -1.JPG);
+    background-image: url(../img/texture/decoration-1.JPG);
     background-size: 110px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -458,7 +487,7 @@ main .container-parallax-2
     width: 110px;
     height: 110px;
     z-index: 9997;
-    background-image: url(../img/texture/decoration\ -2.JPG);
+    background-image: url(../img/texture/decoration-2.JPG);
     background-size: 110px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -575,78 +604,140 @@ main .container-parallax-2
 }
 .main .gallery-img
 {
-    position: relative;
+    position: fixed;
     display: none;
-    margin: 0 auto;
-    top: 310px;
-    height: 350px;
-    width: 400px;
-    background: linear-gradient(#636363, #2E2B33);
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(#2e2b33, #636363);
+    border-radius: 7px;
+    box-shadow: 3px 4px 4px 4px rgba(46,43,51,.1);
     z-index: 9999;
-    border: 1px solid white;
 }
 .main .gallery-img.active
 {
-    display: inline-block;
-}
-.main .gallery-img .btn-arrow-left
-{
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 350px;
-    border: 1px solid white;
-}
-.main .gallery-img .img
-{
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 50px;
-    right: 50px;
-    height: 350px;
-    border: 1px solid white;
-}
-.main .gallery-img .btn-arrow-right
-{
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 347px;
-    width: 50px;
-    height: 350px;
-    border: 1px solid white;
+    display: block;
 }
 .main .gallery-img .img-title
 {
     position: absolute;
     display: inline-block;
-    top: 400px;
+    top: 3px;
     left: 0;
     right: 0;
-    height: 30px;
-    font-size: 16px;
-    font-weight: 600;
-    border: 1px solid white;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    color: #FCFFEE;
+    font-size: cursive;
+    padding-top: 4px;
 }
-.main .gallery-img .img-mini
+.main .gallery-img .btn-close
 {
     position: absolute;
     display: inline-block;
-    top: 435px;
-    left: 10px;
-    width: 60px;
-    height: 60px;
-    border: 1px solid white;
+    top: 3px;
+    right: 3px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/gallery/close.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.main .gallery-img .btn-arrow-left
+{
+    position: absolute;
+    display: inline-block;
+    top: 36px;
+    left: 0;
+    width: 50px;
+    height: 650px;
+    background-image: url(../img/gallery/arrow-left.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 9998;
+    opacity: .5;
+
+}
+.main .gallery-img .btn-arrow-left:hover
+{
+    opacity: 1;
+}
+.main .gallery-img .img
+{
+    position: absolute;
+    display: inline-block;
+    top: 55px;
+    left: 0px;
+    right: 0px;
+    height: 650px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 9997;
+}
+.main .gallery-img .btn-arrow-right
+{
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    right: 0;
+    width: 50px;
+    height: 650px;
+    background-image: url(../img/gallery/arrow-right.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 9998;
+    opacity: .5;
+}
+.main .gallery-img .btn-arrow-right:hover
+{
+    opacity: 1;
+}
+.main .gallery-img .preview
+{
+    position: absolute;
+    display: inline-block;
+    top: 720px;
+    left: 0;
+    right: 0;
+    height: 59px;
+}
+.main .gallery-img .preview span
+{
+    position: relative;
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: max-content;
+    cursor: pointer;
+    border-top: 1px solid #FCFFEE;
+}
+.main .gallery-img .preview .img-mini
+{
+    display: inline-block;
+    margin: 3px;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 /*start footer*/
 main .home-footer
 {
     position: relative;
     display: inline-block;
-    top: 310px;
+    top: 340px;
     left: 0;
     height: 610px;
     width: 100%;
