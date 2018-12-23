@@ -612,8 +612,6 @@ main .container-parallax-2
     right: 0;
     bottom: 0;
     background: linear-gradient(#2e2b33, #636363);
-    border-radius: 7px;
-    box-shadow: 3px 4px 4px 4px rgba(46,43,51,.1);
     z-index: 9999;
 }
 .main .gallery-img.active
@@ -624,7 +622,7 @@ main .container-parallax-2
 {
     position: absolute;
     display: inline-block;
-    top: 3px;
+    padding-top: 6px;
     left: 0;
     right: 0;
     height: 50px;
@@ -633,14 +631,12 @@ main .container-parallax-2
     text-align: center;
     color: #FCFFEE;
     font-size: cursive;
-    padding-top: 4px;
 }
 .main .gallery-img .btn-close
 {
     position: absolute;
     display: inline-block;
-    top: 3px;
-    right: 3px;
+    right: 0;
     width: 50px;
     height: 50px;
     background-image: url(../img/gallery/close.png);
@@ -653,7 +649,7 @@ main .container-parallax-2
 {
     position: absolute;
     display: inline-block;
-    top: 36px;
+    top: 55px;
     left: 0;
     width: 50px;
     height: 650px;
@@ -687,7 +683,7 @@ main .container-parallax-2
 {
     position: absolute;
     display: inline-block;
-    top: 50px;
+    top: 55px;
     right: 0;
     width: 50px;
     height: 650px;
@@ -710,13 +706,14 @@ main .container-parallax-2
     top: 720px;
     left: 0;
     right: 0;
-    height: 59px;
+    height: 70px;
 }
 .main .gallery-img .preview span
 {
     position: relative;
     display: block;
     margin: auto;
+    padding-top: 8px;
     height: 100%;
     width: max-content;
     cursor: pointer;
@@ -725,9 +722,9 @@ main .container-parallax-2
 .main .gallery-img .preview .img-mini
 {
     display: inline-block;
-    margin: 3px;
-    height: 50px;
-    width: 50px;
+    margin: 5px 3px;
+    height: 45px;
+    width: 45px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -743,6 +740,7 @@ main .home-footer
     width: 100%;
     background: linear-gradient(to top, #efeeee, #2a363b);
     color: white;
+    overflow-y: hidden;
 }
 main .home-footer .container
 {
@@ -750,7 +748,7 @@ main .home-footer .container
     display: inline-block;
     top: 0;
     width: 100%;
-    height: 50%;
+    height: 45%;
 }
 main .home-footer .container .footer-logo
 {
@@ -832,9 +830,9 @@ main .home-footer .box.map
 {
     position: absolute;
     display: inline-block;
-    top: 50%;
+    top: 45%;
     width: 100%;
-    height: 50%;
+    height: 47.5%;
 }
 main .home-footer .box.map.view
 {

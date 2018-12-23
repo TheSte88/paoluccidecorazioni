@@ -8,13 +8,11 @@ var app = {
         let $btnNextImage = $(".btn-arrow-right");
         let $btnPrevImage = $(".btn-arrow-left");
         
-
         $menuToggle.on("click", navbar.toggle);
         $btnGallery.on("click", gallery.init);
         $btnCloseGallery.on("click", gallery.hide);
         $btnNextImage.on("click",gallery.navigation);
         $btnPrevImage.on("click",gallery.navigation);
-
     }
 }
 var navbar = {
@@ -79,6 +77,8 @@ var gallery = {
     showImage: function(arrayPath, x){
         let backgroundImage = arrayPath[x];
         $(".gallery-img .img").attr("src",backgroundImage);
+        
+        gallery.focus(x);
     },
     navigation: function(e){
         let el = gallery.image[$(".img-title").text()]
@@ -119,6 +119,14 @@ var gallery = {
         }
         gallery.showImage(arrayPath,x)
 
+    },
+    focus: function(x){
+        $(".img-mini")[$(".img-mini").length - 1].style.opacity = "1"; 
+        $(".img-mini")[x].style.opacity = "0.2";
+        if (x >= 1)
+        {
+            $(".img-mini")[x-1].style.opacity = "1";
+        }
     },
     image: {
             "Texture": [{"src":"img/texture/decoration-1.JPG"},
