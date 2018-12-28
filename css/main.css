@@ -737,13 +737,10 @@ main .home-footer .container .footer-logo
     left: 0px;
     height: 20%;
     width: 100%;
-    padding-left: 75px;
     padding-top: 20px;
+    padding-left: 15px;
     font-size: 18px;
-    background-image: url(../img/logo/logo-bianco.png);
-    background-size: 55px;
-    background-position: 15px center;
-    background-repeat: no-repeat;
+    font-family: 'nosifer', cursive;
 }
 main .home-footer .container .footer-name
 {
