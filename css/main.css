@@ -49,7 +49,7 @@ p
     display: inline-block;
     width: 100%;
     height: 50px;
-    background: linear-gradient(#636363, #2E2B33);
+    background: #2E2B33;
     box-shadow: 2px 3px 3px 3px rgba(0,0,87,.05);
     z-index: 9999;
 }
@@ -139,7 +139,7 @@ p
     top: 0;
     padding-top: 5px;
     bottom: 25px;
-    right: 50px;
+    right: 0px;
     text-align: center;
     z-index: 9999;
 }
@@ -149,21 +149,8 @@ p
     display: inline-block;
     top: 25px;
     bottom: 0;
-    right: 50px;
+    right: 0px;
     z-index: 9999;
-}
-.toolbar .logo
-{
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50px;
-    background-image: url(../img/logo/logo-bianco.png);
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 .toolbar .navbar
 {
@@ -171,7 +158,7 @@ p
     left: 0;
     right: 0;
     height: 255px;
-    background: linear-gradient(#2E2B33, #0D0D0F);
+    background: #2E2B33;
     transform: translateY(-270px);
     transform-style: preserve-3d;
     transition: .3s ease-in-out;
@@ -202,8 +189,8 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 8px solid #FCFFEE;
-    border-right: 8px solid #FCFFEE;
+    border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE;
 }
 .toolbar .navbar .menu-item .menu-services
 {
@@ -230,8 +217,8 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 8px solid #FCFFEE;
-    border-right: 8px solid #FCFFEE;
+    border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE;
 }
 .toolbar .navbar .menu-item .menu-photo
 {
@@ -259,8 +246,8 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 8px solid #FCFFEE;
-    border-right: 8px solid #FCFFEE;
+    border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE;
 }
 .toolbar .navbar .menu-item .menu-video
 {
@@ -288,8 +275,8 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 8px solid #FCFFEE;
-    border-right: 8px solid #FCFFEE;
+    border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE;
 }
 .toolbar .navbar .menu-item .menu-info
 {
@@ -316,8 +303,8 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 8px solid #FCFFEE;
-    border-right: 8px solid #FCFFEE;
+    border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE;
 }
 .toolbar .navbar.active
 {
@@ -327,18 +314,18 @@ p
 @keyframes hover-bounce {
     0% 
     {
-        border-left: 2px solid #FCFFEE;
-        border-right: 2px solid #FCFFEE;
-    }
-    50% 
-    {
         border-left: 5px solid #FCFFEE;
         border-right: 5px solid #FCFFEE;
     }
+    50% 
+    {
+        border-left: 10px solid #FCFFEE;
+        border-right: 10px solid #FCFFEE;
+    }
     100% 
     {
-        border-left: 8px solid #FCFFEE;
-        border-right: 8px solid #FCFFEE;
+        border-left: 15px solid #FCFFEE;
+        border-right: 15px solid #FCFFEE;
     }
 }
 /*Start main*/
@@ -357,13 +344,13 @@ p
 /*logo + animation logo*/
 .main .area-buffer
 {
-    position: absolute;
+    position: relative;
     display: inline-block;
-    top: 10px;
     width: 100%;
-    height: 200px;
+    height: 180px;
     background: linear-gradient(#D1D1D1, #DBDBDB);
     z-index: 9996;
+    overflow: hidden;
 }
 .main .area.img-1
 {
@@ -388,11 +375,9 @@ p
 
 .main .text.intro
 {
-    position: absolute;
+    position: relative;
     display: inline-block;
-    top: 210px;
-    left: 0;
-    right: 0;
+    width: 100%;
     font-weight: 400;
     z-index: 9997;
     background: #85C7F2;
@@ -401,9 +386,8 @@ main .container-parallax-1
 {
     position: relative;
     display: inline-block;
-    top: 310px;
     width: 100%;
-    height: 400px;   
+    height: 500px;   
     background-image: url(../img/texture/decoration-4.JPG);
     background-size: cover;
     background-position: center center;
@@ -415,7 +399,6 @@ main .container-parallax-1
 {
     position: relative;
     display: inline-block;
-    top: 310px;
     width: 100%;
     background: #85C7F2;
     z-index: 9996;
@@ -424,7 +407,6 @@ main .container-parallax-2
 {
     position: relative;
     display: inline-block;
-    top: 310px;
     width: 100%;
     height: 550px;
     background-image: url(../img/industriale/decorazione-colonne.png);
@@ -438,7 +420,6 @@ main .container-parallax-2
 {
     position: relative;
     display: inline-block;
-    top: 310px;
     width: 100%;
     background: #85C7F2;
     z-index: 9996;
@@ -450,7 +431,6 @@ main .container-parallax-2
 { 
     position: relative;
     display: inline-block;
-    top: 310px;
     left: 0;
     width: 100%;
     height: 380px;
@@ -734,7 +714,6 @@ main .home-footer
 {
     position: relative;
     display: inline-block;
-    top: 340px;
     left: 0;
     height: 610px;
     width: 100%;
@@ -842,6 +821,7 @@ main .home-footer .box.map.view
     left: 5%;
     width: 90% !important;
     height: 90% !important;
+    padding-bottom: 10px;
 }
 /*end footer*/
 
