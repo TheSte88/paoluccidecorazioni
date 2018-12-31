@@ -13,6 +13,7 @@ var app = {
         $btnCloseGallery.on("click", gallery.hide);
         $btnNextImage.on("click",gallery.navigation);
         $btnPrevImage.on("click",gallery.navigation);
+        $(".img-mini").on("click",gallery.choiceImage);
     }
 }
 var navbar = {
@@ -51,7 +52,7 @@ var gallery = {
         gallery.showImage(arrayPath, 0);
 
         $(".img-title").text(e.target.innerHTML);
-    
+        
         gallery.show();
     },
     show: function(){
@@ -127,6 +128,9 @@ var gallery = {
         {
             $(".img-mini")[x-1].style.opacity = "1";
         }
+    },
+    choiceImage: function(e){
+        console.log(e);
     },
     image: {
             "Texture": [{"src":"img/texture/decoration-1.JPG"},
