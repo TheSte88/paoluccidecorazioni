@@ -36,7 +36,7 @@ body
 }
 p
 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
     color: #2E2B33;
     font-family: "Satisfy", cursive;
@@ -347,8 +347,8 @@ p
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 180px;
-    background: linear-gradient(#D1D1D1, #DBDBDB);
+    height: 240px;
+    background: white;
     z-index: 9996;
     overflow: hidden;
 }
@@ -380,14 +380,63 @@ p
     width: 100%;
     font-weight: 400;
     z-index: 9997;
-    background: #85C7F2;
+    background: rgba(255,255,255,1)
 }
+
+.main .text.intro .container-1
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 36px;
+    padding: 50px 0px 50px 0px; 
+}
+
+.main .text.intro .container-2
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 36px;
+    padding: 50px 0px 50px 0px; 
+}
+
+.main .text.intro .container-3
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 36px;
+    padding: 50px 0px 50px 0px; 
+}
+
+.main .text.intro .container-4
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 36px;
+    padding: 50px 0px 50px 0px; 
+}
+
 main .container-parallax-1
 {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 500px;   
+    height: 200px;   
     background-image: url(../img/texture/decoration-4.JPG);
     background-size: cover;
     background-position: center center;
@@ -408,14 +457,43 @@ main .container-parallax-2
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 550px;
-    background-image: url(../img/industriale/decorazione-colonne.png);
-    background-size: cover;
+    height: 400px;
+    background-image: url(../img/industriale/lampadario-resina-2.jpg);
+    background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     z-index: 9996;
 }
+
+main .container-parallax-3
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/interni/salotto.jpg);
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    z-index: 9996;
+}
+
+main .container-parallax-4
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/interni/camera-da-letto.png);
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    z-index: 9996;
+}
+
 .main .text.photo
 {
     position: relative;
@@ -824,7 +902,8 @@ main .home-footer .box.map.view
 /*Mobile M View*/
 @media screen and (min-width: 375px)
 {
-    .main .area-buffer{height: 210px;}
+    p{font-size: 32px;}
+    .main .area-buffer{height: 300px;}
     .main .galleria .texture{left: 20px;}
     .main .galleria .interni{right: 20px;}
     .main .galleria .industriale{left: 20px;}
@@ -832,7 +911,8 @@ main .home-footer .box.map.view
 /*Mobile L View*/
 @media screen and (min-width: 425px)
 {
-    .main .area-buffer{height: 240px;}
+    p{font-size: 36px;}
+    .main .area-buffer{height: 300px;}
     .main .galleria .texture{left: 25px;}
     .main .galleria .interni{right: 25px;}
     .main .galleria .industriale{left: 25px;}
