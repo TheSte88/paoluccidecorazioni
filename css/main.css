@@ -49,7 +49,7 @@ p
     display: inline-block;
     width: 100%;
     height: 50px;
-    background: #2E2B33;
+    background: rgba(32, 30, 34, 1);
     box-shadow: 2px 3px 3px 3px rgba(0,0,87,.05);
     z-index: 9999;
 }
@@ -158,7 +158,7 @@ p
     left: 0;
     right: 0;
     height: 255px;
-    background: #2E2B33;
+    background: rgba(32, 30, 34, 1);
     transform: translateY(-270px);
     transform-style: preserve-3d;
     transition: .3s ease-in-out;
@@ -364,14 +364,18 @@ p
     background-attachment: fixed;
     -webkit-animation: img-1 2s; /* Safari 4.0 - 8.0 */
     animation: img-1 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
     z-index: 9997;
 }
 @keyframes img-1 {
-    0% {transform: scale(0.1)}
-    50% {transform: scale(1.1)}
+    0% {transform: scale(0.5)}
+    50% {transform: scale(1.5)}
     100% {transform: scale(1)}
 }
 /*End logo + animation logo*/
+
+/*End parallax + image & description*/
 
 .main .text.intro
 {
@@ -412,7 +416,7 @@ p
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 650px;
+    height: 600px;
     text-align: center;
     line-height: 70px;
     font-size: 36px;
@@ -444,14 +448,7 @@ main .container-parallax-1
     background-attachment: fixed;
     z-index: 9996;
 }
-.main .text.service
-{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    background: #85C7F2;
-    z-index: 9996;
-}
+
 main .container-parallax-2
 {
     position: relative;
@@ -494,15 +491,87 @@ main .container-parallax-4
     z-index: 9996;
 }
 
+main .container-parallax-5
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/texture/decoration-8.JPG);
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.main .text.service
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+    z-index: 9996;
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+    padding-top: 50px; 
+}
+
+.postit 
+{
+    line-height: 1;    
+    text-align:center;     
+    width: 275px;    
+    margin: 25px;    
+    min-height:250px;
+    max-height:250px;
+    position:relative;   
+    border:1px solid #E8E8E8;  
+    border-top:40px solid #fdfd86;
+    font-family:'Reenie Beanie';    
+    font-size:22px;      
+    border-bottom-right-radius: 60px 5px;
+    display:inline-block;
+    background: #ffff88; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
+    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    overflow-y:scroll; 
+}
+
+.postit:after {     
+    content: "";
+   position:absolute;
+   z-index:-1;
+   right:-0px; bottom:20px;
+   width:200px;
+   height: 25px;
+   background: rgba(0, 0, 0, 0.2);
+   box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
+ -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+  -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+       -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+      -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+          transform: matrix(-1, -0.1, 0, 1, 0, 0);
+ }
+
+
 .main .text.photo
 {
     position: relative;
     display: inline-block;
     width: 100%;
-    background: #85C7F2;
+    background: rgba(0, 0, 0, 0);
     z-index: 9996;
+    padding-top: 50px;
 }
-/*End parallax*/
+
+
+/*End parallax + image & description*/
 
 /*Start Gallery*/
 .main .galleria
@@ -558,7 +627,7 @@ main .container-parallax-4
     left: 0;
     height: 30px;
     width: 100%;
-    color: #006494;
+    color: #2E2B33;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -607,7 +676,7 @@ main .container-parallax-4
     left: 0;
     height: 30px;
     width: 100%;
-    color: #006494;
+    color: #2E2B33;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -656,7 +725,7 @@ main .container-parallax-4
     left: 0;
     height: 30px;
     width: 100%;
-    color: #006494;
+    color: #2E2B33;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -786,7 +855,9 @@ main .container-parallax-4
     background-position: center;
     background-repeat: no-repeat;
 }
-/*start footer*/
+/*End Gallery*/
+
+/*Start footer*/
 main .home-footer
 {
     position: relative;
@@ -794,7 +865,7 @@ main .home-footer
     left: 0;
     height: 610px;
     width: 100%;
-    background: linear-gradient(to top, #efeeee, #2a363b);
+    background-color:rgba(32, 30, 34, 1);
     color: white;
     overflow-y: hidden;
 }
@@ -897,7 +968,7 @@ main .home-footer .box.map.view
     height: 90% !important;
     padding-bottom: 10px;
 }
-/*end footer*/
+/*End footer*/
 
 /*Mobile M View*/
 @media screen and (min-width: 375px)
