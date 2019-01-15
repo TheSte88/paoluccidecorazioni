@@ -28,7 +28,7 @@ body
 	-webkit-user-select: none;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
-	background: #DBDBDB;
+	background:rgba(255,255,255,1);
     color: #636363;
     min-width: 320px;
     overflow: hidden;
@@ -189,8 +189,9 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE;
+    color: red;
+    /* border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE; */
 }
 .toolbar .navbar .menu-item .menu-services
 {
@@ -217,8 +218,9 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE;
+    color: yellow;
+    /* border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE; */
 }
 .toolbar .navbar .menu-item .menu-photo
 {
@@ -246,8 +248,9 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE;
+    color: green;
+    /* border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE; */
 }
 .toolbar .navbar .menu-item .menu-video
 {
@@ -275,8 +278,8 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE;
+    /* border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE; */
 }
 .toolbar .navbar .menu-item .menu-info
 {
@@ -303,8 +306,9 @@ p
     -moz-animation: hover-bounce .5s;
     -o-animation: hover-bounce .5s;
     animation: hover-bounce .5s;
-    border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE;
+    color: blue;
+    /* border-left: 15px solid #FCFFEE;
+    border-right: 15px solid #FCFFEE; */
 }
 .toolbar .navbar.active
 {
@@ -498,11 +502,12 @@ main .container-parallax-5
     width: 100%;
     height: 200px;
     background-image: url(../img/texture/decoration-8.JPG);
-    background-size: contain;
+    background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: 0;
+    text-align: center;
 }
 
 .main .text.service
@@ -510,7 +515,7 @@ main .container-parallax-5
     position: relative;
     display: inline-block;
     width: 100%;
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 1);
     z-index: 9996;
     text-align: center;
     margin: 25px 0px 0px 0px;
@@ -1004,8 +1009,8 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE;
+        /* border-top: 5px solid #FCFFEE;
+        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1017,8 +1022,8 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE;
+        /* border-top: 5px solid #FCFFEE;
+        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1030,8 +1035,8 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE;
+        /* border-top: 5px solid #FCFFEE;
+        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1043,8 +1048,8 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE;
+        /* border-top: 5px solid #FCFFEE;
+        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1056,8 +1061,8 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE;
+        /* border-top: 5px solid #FCFFEE; */
+        /* border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1066,31 +1071,37 @@ main .home-footer .box.map.view
         {
             border-left: 0px;
             border-right: 0px;
-            border-top: 1px solid #FCFFEE;
+            /* border-top: 1px solid #FCFFEE; */
             border-bottom: 1px solid #FCFFEE;
         }
         50% 
         {
             border-left: 0px;
             border-right: 0px;
-            border-top: 3px solid #FCFFEE;
-            border-bottom: 3px solid #FCFFEE;
+            /* border-top: 3px solid #FCFFEE; */
+            border-bottom: 5px solid #FCFFEE;
         }
         100% 
         {
             border-left: 0px;
             border-right: 0px;
-            border-top: 5px solid #FCFFEE;
-            border-bottom: 5px solid #FCFFEE;
+            /* border-top: 5px solid #FCFFEE; */
+            border-bottom: 10px solid #FCFFEE;
         }
     }
     .main{top: 85px;}
-    .main .area-buffer{height: 400px;}
+    .main .area-buffer{height: 500px;}
+    .main .text.intro .container-2{height: 350px;}
+    .main .text.intro .container-3{height: 400px;}
+    .main .container-parallax-3{height: 450px;}
+    .main .container-parallax-4{height: 450px;}
+    .main .container-parallax-5{height: 230px;}
+    .main .text.service{padding: 85px 0px 0px 0px; margin: 0px;}
     .main .galleria{height: 200px;}
     .main .galleria .texture{left: 10%;}
     .main .galleria .interni{left: 40%;}
     .main .galleria .industriale{top: 20px; left: 70%;}
-    main .home-footer{height: 330px;}
+    .main .home-footer{height: 330px; margin-top: 50px;}
 
     main .home-footer .container{width: 50%; height: 100%;}
     main .home-footer .container .footer-logo{height: 10%; padding-top: 5px;}
@@ -1098,7 +1109,7 @@ main .home-footer .box.map.view
     main .home-footer .container .footer-work{top: 20%;}
     main .home-footer .container .footer-address{top:30%;}
     main .home-footer .container .footer-phone{top:40%;}
-    main .home-footer .container .footer-piva{top: 50%;}
+    main .home-footer .container .footer-piva{top: 50%; margin-top: 50px;}
 
 
 
