@@ -33,10 +33,12 @@ body
     min-width: 320px;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;    
+    background-color: #eee;
 }
 p
 {
-    font-size: 28px;
+    font-size: 18px;
+    line-height: 27px;
     text-align: center;
     color: #2E2B33;
     font-family: "Satisfy", cursive;
@@ -121,7 +123,7 @@ p
     position: absolute;
     display: inline-block;
     left: 50px;
-    right: 0px;
+    right: 50px;
     text-align: center;
     font-family: 'nosifer', cursive;
     color: #FCFFEE;
@@ -139,7 +141,6 @@ p
     top: 0;
     padding-top: 5px;
     bottom: 25px;
-    right: 0px;
     text-align: center;
     z-index: 9999;
 }
@@ -149,7 +150,6 @@ p
     display: inline-block;
     top: 25px;
     bottom: 0;
-    right: 0px;
     z-index: 9999;
 }
 .toolbar .navbar
@@ -157,180 +157,41 @@ p
     position: absolute;   
     left: 0;
     right: 0;
-    height: 255px;
+    height: 230px;
     background: rgba(32, 30, 34, 1);
     transform: translateY(-270px);
     transform-style: preserve-3d;
     transition: .3s ease-in-out;
     z-index: 9998;
 }
-.toolbar .navbar .menu-item .menu-home
+.toolbar .navbar ul.menu-item li
 {
     position: relative;
-    height: 50px;
+    height: 40px;  
+    margin: 5px;
 }
-.toolbar .navbar .menu-item .menu-home .home-link
+.toolbar .navbar ul.menu-item li a 
 {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 5px;
+    padding: 5px;
     text-align: center;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 18px;
     color: #F9FFF6;
     font-family: "Satisfy", cursive;
 }
-.toolbar .navbar .menu-item .menu-home .home-link:hover
+.toolbar .navbar ul.menu-item li:hover a
 {
-    -webkit-animation: hover-bounce .5s;
-    -moz-animation: hover-bounce .5s;
-    -o-animation: hover-bounce .5s;
-    animation: hover-bounce .5s;
-    color: red;
-    /* border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE; */
-}
-.toolbar .navbar .menu-item .menu-services
-{
-    position: relative;
-    height: 50px;   
-}
-.toolbar .navbar .menu-item .menu-services .services-link
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-top: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    color: #FCFFEE;
-    font-family: "Satisfy", cursive;
-}
-.toolbar .navbar .menu-item .menu-services .services-link:hover
-{
-    -webkit-animation: hover-bounce .5s;
-    -moz-animation: hover-bounce .5s;
-    -o-animation: hover-bounce .5s;
-    animation: hover-bounce .5s;
-    color: yellow;
-    /* border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE; */
-}
-.toolbar .navbar .menu-item .menu-photo
-{
-    position: relative;
-    height: 50px;  
-}
-.toolbar .navbar .menu-item .menu-photo .photo-link
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-top: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    color: #FCFFEE;
-    font-family: "Satisfy", cursive;
-
-}
-.toolbar .navbar .menu-item .menu-photo .photo-link:hover
-{
-    -webkit-animation: hover-bounce .5s;
-    -moz-animation: hover-bounce .5s;
-    -o-animation: hover-bounce .5s;
-    animation: hover-bounce .5s;
-    color: green;
-    /* border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE; */
-}
-.toolbar .navbar .menu-item .menu-video
-{
-    position: relative;
-    height: 50px;  
-}
-.toolbar .navbar .menu-item .menu-video .video-link
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-top: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    color: #FCFFEE;
-    font-family: "Satisfy", cursive;
-
-}
-.toolbar .navbar .menu-item .menu-video .video-link:hover
-{
-    -webkit-animation: hover-bounce .5s;
-    -moz-animation: hover-bounce .5s;
-    -o-animation: hover-bounce .5s;
-    animation: hover-bounce .5s;
-    /* border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE; */
-}
-.toolbar .navbar .menu-item .menu-info
-{
-    position: relative;
-    height: 50px;
-}
-.toolbar .navbar .menu-item .menu-info .info-link
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-top: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    color: #FCFFEE;
-    font-family: "Satisfy", cursive;
-}
-.toolbar .navbar .menu-item .menu-info .info-link:hover
-{
-    -webkit-animation: hover-bounce .5s;
-    -moz-animation: hover-bounce .5s;
-    -o-animation: hover-bounce .5s;
-    animation: hover-bounce .5s;
-    color: blue;
-    /* border-left: 15px solid #FCFFEE;
-    border-right: 15px solid #FCFFEE; */
+    border: 1px solid #FCFFEE;
+    border-radius: 5px;
 }
 .toolbar .navbar.active
 {
     transform: translateY(50px);
-
-}
-@keyframes hover-bounce {
-    0% 
-    {
-        border-left: 5px solid #FCFFEE;
-        border-right: 5px solid #FCFFEE;
-    }
-    50% 
-    {
-        border-left: 10px solid #FCFFEE;
-        border-right: 10px solid #FCFFEE;
-    }
-    100% 
-    {
-        border-left: 15px solid #FCFFEE;
-        border-right: 15px solid #FCFFEE;
-    }
 }
 /*Start main*/
 /*Mobile view (320px - 768px)*/
@@ -351,7 +212,7 @@ p
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 240px;
+    height: 230px;
     background: white;
     z-index: 9996;
     overflow: hidden;
@@ -369,7 +230,6 @@ p
     -webkit-animation: img-1 2s; /* Safari 4.0 - 8.0 */
     animation: img-1 2s;
     animation-direction: alternate;
-    animation-iteration-count: infinite;
     z-index: 9997;
 }
 @keyframes img-1 {
@@ -386,65 +246,23 @@ p
     position: relative;
     display: inline-block;
     width: 100%;
-    font-weight: 400;
     z-index: 9997;
-    background: rgba(255,255,255,1)
 }
 
 .main .text.intro .container-1
 {
     position: relative;
     display: inline-block;
+    margin: 10px 0px;
     width: 100%;
-    height: 300px;
     text-align: center;
-    line-height: 70px;
-    font-size: 36px;
-    padding: 50px 0px 50px 0px; 
 }
-
-.main .text.intro .container-2
-{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 450px;
-    text-align: center;
-    line-height: 70px;
-    font-size: 36px;
-    padding: 50px 0px 50px 0px; 
-}
-
-.main .text.intro .container-3
-{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 600px;
-    text-align: center;
-    line-height: 70px;
-    font-size: 36px;
-    padding: 50px 0px 50px 0px; 
-}
-
-.main .text.intro .container-4
-{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    line-height: 70px;
-    font-size: 36px;
-    padding: 50px 0px 50px 0px; 
-}
-
 main .container-parallax-1
 {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 200px;   
+    height: 300px;   
     background-image: url(../img/texture/decoration-4.JPG);
     background-size: cover;
     background-position: center center;
@@ -452,91 +270,85 @@ main .container-parallax-1
     background-attachment: fixed;
     z-index: 9996;
 }
-
+.main .text.intro .container-2
+{
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
 main .container-parallax-2
 {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-image: url(../img/industriale/lampadario-resina-2.jpg);
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     z-index: 9996;
 }
-
+.main .text.intro .container-3
+{
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
 main .container-parallax-3
 {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 300px;
+    height: 240px;
     background-image: url(../img/interni/salotto.jpg);
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     z-index: 9996;
 }
-
+.main .text.intro .container-4
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px;
+    text-align: center;
+}
+.main .text.intro .container-4 p
+{
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: 600;
+}
 main .container-parallax-4
 {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 300px;
+    height: 240px;
     background-image: url(../img/interni/camera-da-letto.png);
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     z-index: 9996;
 }
-
-main .container-parallax-5
-{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    background-image: url(../img/texture/decoration-8.JPG);
-    background-size: 100%;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: 0;
-    text-align: center;
-}
-
 .main .text.service
 {
     position: relative;
     display: inline-block;
+    padding: 20px;
     width: 100%;
-    background: rgba(255, 255, 255, 1);
     z-index: 9996;
     text-align: center;
-    margin: 25px 0px 0px 0px;
-    padding-top: 50px; 
 }
-
 .postit 
 {
-    line-height: 1;    
-    text-align:center;     
-    width: 275px;    
-    margin: 25px;    
-    min-height:250px;
-    max-height:250px;
-    position:relative;   
-    border:1px solid #E8E8E8;  
-    border-top:40px solid #fdfd86;
-    font-family:'Reenie Beanie';    
-    font-size:22px;      
-    border-bottom-right-radius: 60px 5px;
+    position: relative;  
     display:inline-block;
+    width: 250px;             
+    font-family:'Reenie Beanie';    
     background: #ffff88; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
@@ -545,37 +357,23 @@ main .container-parallax-5
     background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
     background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    overflow-y:scroll; 
+    border-radius: 7px;
+    box-shadow: 0 8px 6px -6px black;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
 }
-
-.postit:after {     
-    content: "";
-   position:absolute;
-   z-index:-1;
-   right:-0px; bottom:20px;
-   width:200px;
-   height: 25px;
-   background: rgba(0, 0, 0, 0.2);
-   box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
- -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-  -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-       -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-      -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-          transform: matrix(-1, -0.1, 0, 1, 0, 0);
- }
-
-
+.postit p
+{
+    margin: 5px 0px;
+    text-align:center;
+}
 .main .text.photo
 {
     position: relative;
     display: inline-block;
     width: 100%;
-    background: rgba(0, 0, 0, 0);
-    z-index: 9996;
-    padding-top: 50px;
+    background: rgba(0, 0, 0, 0);   
 }
-
-
 /*End parallax + image & description*/
 
 /*Start Gallery*/
@@ -754,12 +552,11 @@ main .container-parallax-5
 {
     position: absolute;
     display: inline-block;
-    padding-top: 6px;
+    padding-top: 11px;
     left: 0;
     right: 0;
     height: 50px;
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 24px;
     text-align: center;
     color: #FCFFEE;
     font-size: cursive;
@@ -834,7 +631,7 @@ main .container-parallax-5
 {
     position: absolute;
     display: inline-block;
-    top: 72%;
+    top: 77%;
     left: 0;
     right: 0;
     height: 70px;
@@ -854,8 +651,8 @@ main .container-parallax-5
 {
     display: inline-block;
     margin: 5px 3px;
-    height: 45px;
-    width: 45px;
+    height: 30px;
+    width: 30px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -976,6 +773,7 @@ main .home-footer .box.map.view
 /*End footer*/
 
 /*Mobile M View*/
+/*
 @media screen and (min-width: 375px) and (max-width: 424px)
 {
     p{font-size: 32px;}
@@ -984,7 +782,9 @@ main .home-footer .box.map.view
     .main .galleria .interni{right: 20px;}
     .main .galleria .industriale{left: 20px;}
 }
+*/
 /*Mobile L View*/
+/*
 @media screen and (min-width: 425px) and (max-width: 767px)
 {
     p{font-size: 36px;}
@@ -993,7 +793,9 @@ main .home-footer .box.map.view
     .main .galleria .interni{right: 25px;}
     .main .galleria .industriale{left: 25px;}
 }
+*/
 /*Tablet view (768px)*/
+/*
 @media screen and (min-width: 768px) and (max-width: 1023px)
 {
     .toolbar{height: 35px;}
@@ -1009,8 +811,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1022,8 +822,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1035,8 +833,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1048,8 +844,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1061,8 +855,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE; */
-        /* border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1071,21 +863,18 @@ main .home-footer .box.map.view
         {
             border-left: 0px;
             border-right: 0px;
-            /* border-top: 1px solid #FCFFEE; */
             border-bottom: 1px solid #FCFFEE;
         }
         50% 
         {
             border-left: 0px;
             border-right: 0px;
-            /* border-top: 3px solid #FCFFEE; */
             border-bottom: 5px solid #FCFFEE;
         }
         100% 
         {
             border-left: 0px;
             border-right: 0px;
-            /* border-top: 5px solid #FCFFEE; */
             border-bottom: 10px solid #FCFFEE;
         }
     }
@@ -1118,11 +907,13 @@ main .home-footer .box.map.view
     main .home-footer .box.map.view{height: 65% !important;}
 
 }
+*/
 
 
 
 
 /*Laptop view (1024px)*/
+/*
 @media screen and (min-width: 1024px)
 {
     .toolbar{height: 50px;}
@@ -1138,8 +929,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1151,8 +940,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1164,8 +951,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1177,8 +962,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE;
-        border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1190,8 +973,6 @@ main .home-footer .box.map.view
         -moz-animation: hover-bounce-botton .5s;
         -o-animation: hover-bounce-botton .5s;
         animation: hover-bounce-botton .5s;
-        /* border-top: 5px solid #FCFFEE; */
-        /* border-bottom: 5px solid #FCFFEE; */
         border-left: 0px;
         border-right: 0px;
     }
@@ -1200,21 +981,18 @@ main .home-footer .box.map.view
         {
             border-left: 0px;
             border-right: 0px;
-            /* border-top: 1px solid #FCFFEE; */
             border-bottom: 1px solid #FCFFEE;
         }
         50% 
         {
             border-left: 0px;
             border-right: 0px;
-            /* border-top: 3px solid #FCFFEE; */
             border-bottom: 5px solid #FCFFEE;
         }
         100% 
         {
             border-left: 0px;
             border-right: 0px;
-            /* border-top: 5px solid #FCFFEE; */
             border-bottom: 10px solid #FCFFEE;
         }
     }
@@ -1225,8 +1003,15 @@ main .home-footer .box.map.view
     .main .text.intro .container-3 {height: 400px}
     .main .text.service {padding-top: 150px;}
     main .container-parallax-5 {height: 300px}
+<<<<<<< HEAD
     
+=======
+    */
+
+
+>>>>>>> paolucci-manu
     /* RICOMINCIARE DA QUI */
+    /*
     main .box-1 {height: 190px;}
     header .navbar .menu-toggle {display: none}
     header .navbar .title-background {top:0px;}
@@ -1240,5 +1025,5 @@ main .home-footer .box.map.view
     }
 
 }
-
+*/
 
