@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+        <title>Paolucci Decorazioni</title>
+        <link rel="shortcut icon" href=".~/favicon.ico" type="image">
+        <link rel="stylesheet" href="~/css/site.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="handheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, shrink-to-fit=no">
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="cleartype" content="on">
+        <meta name="description" content="Arte a domicilio - si eseguono: imbiancature,decorazioni,verniciature e resine decorative">
+        <meta name="keywords" content="imbianchino,imbiancatura,imbiancare,verniciatura,verniciare,decorazioni,decorare,pareti,muri,casa,interni,esterni">
+</head>
+<body>
+    <header>
+        <div class="toolbar">
+            <div class="btn-menu-toggle">
+                <span class="menu-bar1"></span>
+                <span class="menu-bar2"></span>
+                <span class="menu-bar3"></span>
+            </div> 
+            <section class="title">
+                <a class="btn-home" asp-area="" asp-controller="Home" asp-action="Index"></a>
+                <span class="one color-white text-center">PAOLUCCI</span>
+                <span class="two color-white text-center">DECORAZIONI</span>
+            </section>
+            <ul class="text-center">
+                <li class="text-center">
+                    <a class="color-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="text-center">
+                    <a class="color-white" asp-area="" asp-controller="Home" asp-action="Preventivo">Preventivo</a>
+                    </li>
+                <li class="text-center">
+                    <a class="color-white" asp-area="" asp-controller="Home" asp-action="Contatti">Contatti</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <partial name="_CookieConsentPartial" />
+    
+    <main role="main">
+        @RenderBody()
+        <partial name="_Footer" />
+    </main>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        $(document).ready(app.init)
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

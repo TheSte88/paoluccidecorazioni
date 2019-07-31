@@ -1,0 +1,34 @@
+@model ContactViewModel;
+
+<h3 class="text-center">Contatti</h3>
+<ul class="text-center">
+    <li class="dot color-gradient-yellow"></li>
+    <li class="dot color-gradient-blue"></li>
+    <li class="dot color-gradient-purple"></li>
+</ul>
+
+<form method="POST" class="contact">
+    <input asp-for="Name" class="name" placeholder="Nome">
+    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
+    <input asp-for="LastName" class="lastname" placeholder="Cognome">
+    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
+    <input asp-for="Email" class="email" placeholder="Email">
+    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
+    <input asp-for="Phone" class="numer" placeholder="Numero di telefono">
+    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
+    <textarea asp-for="Message" class="message" row="5" placeholder="Scrivi qui il tuo messaggio"></textarea>
+    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
+
+    <span class="btn btn-submit">Invia</span>
+</form>
+
+<section class="error hidden">
+    <span class="btn-close"></span>
+    <h4 class="color-white text-center margin-top-remove">Errore</h4>
+    <p class="color-white text-center">Ci scusiamo per il disagio.<br /> Ti invitiamo a riprovare tra poco!</p>
+</section>
+
+<section class="success hidden">
+    <h4 class="color-white text-center margin-remove">Messaggio Inviato</h4>
+    <p class="color-white text-center">Grazie per averci contattati. <br /> Ti contatteremo al pi&ugrave; presto</p>
+</section>
