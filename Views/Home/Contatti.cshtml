@@ -8,18 +8,22 @@
 </ul>
 
 <form method="POST" class="contact">
+    @Html.AntiForgeryToken()
+    
     <input asp-for="Name" class="name" placeholder="Nome">
-    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
-    <input asp-for="LastName" class="lastname" placeholder="Cognome">
-    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
-    <input asp-for="Email" class="email" placeholder="Email">
-    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
-    <input asp-for="Phone" class="numer" placeholder="Numero di telefono">
-    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
-    <textarea asp-for="Message" class="message" row="5" placeholder="Scrivi qui il tuo messaggio"></textarea>
-    <span data-valmsg-for="StudentName" data-valmsg-replace="true" class="text-danger"></span>
+    <span asp-validation-for="Name" class="text-danger"></span>
 
-    <span class="btn btn-submit">Invia</span>
+    <input asp-for="LastName" class="lastname" placeholder="Cognome">
+    <span asp-validation-for="LastName" class="text-danger"></span>
+
+    <input asp-for="Email" class="email" placeholder="Email">
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+    <input asp-for="Phone" class="numer" placeholder="Numero di telefono">
+    <textarea asp-for="Message" class="message" row="5" placeholder="Scrivi qui il tuo messaggio"></textarea>
+    <span asp-validation-for="Message" class="text-danger"></span>
+
+    <input type="submit" class="btn btn-submit" value="Invia">
 </form>
 
 <section class="error hidden">

@@ -82,15 +82,23 @@ var gallery = {
 }
 
 var contact = {
-    token : $('input[name="__RequestVerificationToken"]').val(),
     submit: function(){
+        $('form.contact').submit(function(e){
+            e.preventDefault();
+            var send = $('input + span').hasClass('field-validation-error') || $('input + span').hasClass('field-validation-error');
+
+            if(!send){
+                contact.sendData()
+            }
+
+        });
+    },
+    sendData: function(e){
         $.ajax({
             cache: false,
             type: "POST",
             url: "Contatti",
             data:  $('form.contact').serialize(),
-            contentType: "application/json: charset=utf-8",
-            dataType: 'json',
             success: function(data){
                 if($('form.contact').hasClass('error')){
                     $('form.contact').removeClass('error');
