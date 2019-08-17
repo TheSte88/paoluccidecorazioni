@@ -11,7 +11,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using MySql.Data.EntityFrameworkCore.Extensions;
 using paolucci_decorazioni.Data;
 
 namespace paolucci_decorazioni
@@ -39,7 +38,7 @@ namespace paolucci_decorazioni
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             //db connetion
-            services.AddDbContext<PaolucciContext>(o => o.UseMySQL(Configuration.GetConnectionString("paolucciContext")));
+            services.AddDbContext<PaolucciContext>(o => o.UseSqlServer(Configuration.GetConnectionString("paolucciContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
