@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using MySql.Data.EntityFrameworkCore.Extensions;
 
 namespace paolucci_decorazioni.Data
 {

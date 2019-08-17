@@ -6,11 +6,16 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using paolucci_decorazioni.Models;
+using paolucci_decorazioni.Data;
 
 namespace paolucci_decorazioni.Controllers
 {
     public class HomeController : Controller
     {
+        PaolucciContext _ctx;
+        public HomeController(PaolucciContext ctx){
+            _ctx = ctx;
+        }
         public IActionResult Index()
         {
             return View();
@@ -27,7 +32,6 @@ namespace paolucci_decorazioni.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[IgnoreAntiforgeryTokenAttribute]
         public IActionResult Contatti(ContactViewModel model){
             if(ModelState.IsValid){
                 return Json(model);

@@ -104,7 +104,7 @@ var contact = {
                     $('form.contact').removeClass('error');
                 }
                 
-                $('form.contact').addClass('hidden');
+                $('div.form-container').addClass('hidden');
                 $('section.success').removeClass('hidden');
             },
             error: function(xhr, ajaxOptions, thrownError){

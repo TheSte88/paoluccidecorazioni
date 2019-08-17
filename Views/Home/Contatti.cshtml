@@ -7,24 +7,32 @@
     <li class="dot color-gradient-purple"></li>
 </ul>
 
-<form method="POST" class="contact">
-    @Html.AntiForgeryToken()
+<div class="form-container">
+
+    <section class="show-tablet contact-image">
+        <span class="painter-image"></span>
+    </section>
     
-    <input asp-for="Name" class="name" placeholder="Nome">
-    <span asp-validation-for="Name" class="text-danger"></span>
+    <form method="POST" class="contact">
+        @Html.AntiForgeryToken()
 
-    <input asp-for="LastName" class="lastname" placeholder="Cognome">
-    <span asp-validation-for="LastName" class="text-danger"></span>
+        <input asp-for="Name" class="name" placeholder="Nome">
+        <span asp-validation-for="Name" class="text-danger"></span>
 
-    <input asp-for="Email" class="email" placeholder="Email">
-    <span asp-validation-for="Email" class="text-danger"></span>
+        <input asp-for="LastName" class="lastname" placeholder="Cognome">
+        <span asp-validation-for="LastName" class="text-danger"></span>
 
-    <input asp-for="Phone" class="numer" placeholder="Numero di telefono">
-    <textarea asp-for="Message" class="message" row="5" placeholder="Scrivi qui il tuo messaggio"></textarea>
-    <span asp-validation-for="Message" class="text-danger"></span>
+        <input asp-for="Email" class="email" placeholder="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
 
-    <input type="submit" class="btn btn-submit" value="Invia">
-</form>
+        <input asp-for="Phone" class="numer" placeholder="Numero di telefono">
+        <textarea asp-for="Message" class="message" row="5" placeholder="Scrivi qui il tuo messaggio"></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+
+        <input type="submit" class="btn btn-submit" value="Invia">
+    </form>
+</div>
+
 
 <section class="error hidden">
     <span class="btn-close"></span>

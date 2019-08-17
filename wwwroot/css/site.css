@@ -74,6 +74,9 @@ p,li,a
 .margin-top-remove{
     margin-top: 0px!important;
 }
+.show-tablet{
+    display: none;
+}
 /* START HEADER */
 header{
     position: absolute;
@@ -451,21 +454,26 @@ footer section.container-map .map-view{
 
 
 /*Contatti*/
-form{
-    position: relative;
-    margin: 10px auto;
-    margin-bottom: 50px;
-    padding: 10px;
-    width: 80%;
-    min-height: 480px;
-    height: auto;
-    max-width: 900px;
-    border-radius: 3px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+.form-container{
+  position: relative;
+  margin: 10px auto;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 80%;
+  min-height: 345px;
+  height: auto;
+  max-width: 900px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
+form{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
 input{
     position: relative;
     display: block;
@@ -591,6 +599,33 @@ section h4{
 
 
 @media(min-width: 768px){
+    .show-tablet{
+        position: relative;
+        display: inline-block;
+    }
+    form.contact{
+        position: relative;
+        left: 50%;
+        width: 50%;
+    }
+    section.contact-image{
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        width: 48%;
+    }
+    span.painter-image{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/logo.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left center;
+    }
     input{
         display: inline-block;
         left: 10%;
@@ -611,11 +646,17 @@ section h4{
         width: 80%;
         left: 10%;
     }
+    .btn.btn-submit{
+        position: relative;
+        bottom: 0px;
+        right: 0px;
+        float: right;
+    }
 }
 
 @media(min-width: 1280px){
-    form{ min-height: 720px; }
-    input{ margin-top: 20px; height: 60px; font-size: 18px; }
-    textarea{ margin-top: 20px; height: 120px; font-size: 18px; }
+    form{ margin-bottom: 10px;}
+    input{margin-bottom: 5px; height: 60px; font-size: 18px; }
+    textarea{ height: 120px; font-size: 18px; }
     input[type="submit"]{ width: 160px; height: 50px; border-radius: 70px; font-size: 18px; }
 }
