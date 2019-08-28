@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using paolucci_decorazioni.Models;
 using paolucci_decorazioni.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace paolucci_decorazioni.Controllers
 {
@@ -34,6 +35,10 @@ namespace paolucci_decorazioni.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Contatti(ContactViewModel model){
             if(ModelState.IsValid){
+                var c = new Contact {Name = model.Name, LastName = model.LastName, Email = model.Email, Phone = model.Phone, Message = model.Message };
+                _ctx.Contacts.Add(c);
+                //_ctx.SaveChange();
+
                 return Json(model);
             }
 

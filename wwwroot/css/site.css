@@ -51,7 +51,7 @@ p,li,a
     color: #fafafa!important;
 }
 .color-black{
-   color:  #2E2B33!important;
+   color:  #212121!important;
 }
 .text-center{
     text-align: center!important;
@@ -59,11 +59,14 @@ p,li,a
 .text-left{
     text-align: left!important;
 }
-.margin-bottom-small{
-    margin-bottom: 10px;
+.margin-bottom-xsmall{
+    margin-bottom: 10px!important;
 }
-.margin-right-small{
+.margin-right-xsmall{
     margin-right: 10px!important;
+}
+.margin-top-small{
+    margin-top: 20px!important;
 }
 .padding-left-remove{
     padding-left: 0px!important;
@@ -84,10 +87,10 @@ header{
     left: 0;
     right: 0px;
     height: 50%;
-    background-image: url('../img/sfondo-mobile.jpg');
+    background-image: url('../img/sfondo-mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right center;
+    background-position: center center;
 }
 div.toolbar{
     position: fixed;
@@ -129,7 +132,8 @@ header div.toolbar ul li{
     cursor: pointer;
 }
 div.toolbar.fixed, div.toolbar.active{
-    background-image: linear-gradient(to right, #369fa2, #0e75d0);
+    /*background-image: linear-gradient(to right, #369fa2, #0e75d0);*/
+    background-color: #212121;
 }
 div.toolbar .btn-menu-toggle{
     position: relative;
@@ -142,13 +146,23 @@ div.toolbar .btn-menu-toggle{
     cursor: pointer;
     z-index: 9999;
 }
+div.toolbar.fixed .btn-menu-toggle span, 
+div.toolbar.active .btn-menu-toggle span{ 
+    color: #fafafa; 
+    background-color: #fafafa; 
+}
+div.toolbar.fixed section.title span,
+div.toolbar.active section.title span{
+    color: #fafafa!important; 
+}
+
 div.toolbar .btn-menu-toggle span{
     position: relative;
     display: inline-block;
     width: 80%;
     left: 10%;
-    color: #fafafa;
-    background-color: #fafafa;
+    color: #212121;
+    background-color: #212121;
     border: 2px solid;
     border-radius: 20px;
     transition: 0.4s;
@@ -371,7 +385,7 @@ footer{
     display: inline-block;
     left: 0;
     width: 100%;
-    background-color: #424242;
+    background-color: #212121;
     overflow-y: hidden;
 }
 footer section{
@@ -433,9 +447,9 @@ footer section.container-map .map-view{
 
 
 @media(min-width: 768px){
-    header{ background-image: url('../img/sfondo.jpg'); background-position: center center; }
-    div.toolbar{ background-image: linear-gradient(to right, #369fa2, #0e75d0); height: 100px; max-height: unset; box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28); -webkit-box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28); -moz-box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28) }
-    div.toolbar section.title span{ font-size: 18px; }
+    header{ background-image: url('../img/sfondo.png'); background-position: center center; }
+    div.toolbar{ background-color: #212121; height: 100px; max-height: unset; box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28); -webkit-box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28); -moz-box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28) }
+    div.toolbar section.title span{ font-size: 18px; color: #fafafa!important;}
     header div.toolbar ul{ position: absolute; }
     header div.toolbar ul li{ font-size: 18px; }
     div.toolbar .btn-menu-toggle{ display: none; }
@@ -455,20 +469,19 @@ footer section.container-map .map-view{
 
 /*Contatti*/
 .form-container{
-  position: relative;
-  margin: 10px auto;
-  margin-bottom: 50px;
-  padding: 10px;
-  width: 80%;
-  min-height: 345px;
-  height: auto;
-  max-width: 900px;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    position: relative;
+    margin: 10px auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    width: 80%;
+    min-height: 345px;
+    height: auto;
+    max-width: 900px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
-
 form{
     display: inline-block;
     width: 100%;
